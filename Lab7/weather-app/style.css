@@ -1,0 +1,134 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    max-width: 600px;
+    width: 90%;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.search {
+    margin-bottom: 30px;
+}
+
+input {
+    padding: 10px;
+    font-size: 1em;
+    border: none;
+    border-radius: 10px;
+    margin-right: 10px;
+    width: 60%;
+    outline: none;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    border-radius: 10px;
+    background: #ff6b6b;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #ff5252;
+}
+
+.weather {
+    margin-top: 30px;
+}
+
+.weather-item {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 20px;
+    margin: 10px 0;
+    animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.weather-icon {
+    font-size: 4em;
+    margin-bottom: 10px;
+}
+
+.temp {
+    font-size: 3em;
+    font-weight: bold;
+}
+
+.description {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.details {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.detail {
+    margin: 5px;
+}
+
+.error {
+    color: #ffeb3b;
+    font-weight: bold;
+}
+
+/* Crazy animations */
+.rain {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.drop {
+    position: absolute;
+    background: #00bcd4;
+    width: 2px;
+    height: 20px;
+    animation: fall 1s linear infinite;
+}
+
+@keyframes fall {
+    to { transform: translateY(100vh); }
+}
